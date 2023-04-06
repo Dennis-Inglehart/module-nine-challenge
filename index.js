@@ -13,7 +13,7 @@ const questions = [
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
     let writeYou = fs.createWriteStream(fileName);
-    writeYou.write(data); // this line throws some errors, and does not populate the file at all
+    writeYou.write(data);
 }
 
 // TODO: Create a function to initialize app
@@ -45,9 +45,29 @@ function init() {
             message: questions[4]
         }
     ])
+    
 .then((answers) => {
-    console.log(answers);
-    writeToFile("test.md", answers);
+    textToWrite =`
+# ${answers.title}
+
+## Description<hr>
+
+${answers.description}
+
+## Usage Instructions<hr>
+
+${answers.usage}
+
+## To Contribute<hr>
+
+${answers.contribution}
+
+## Testing Instructions<hr>
+    
+${answers.test}
+
+## License Information<hr>`;
+    writeToFile("README.md", textToWrite);
 })
 }
 
@@ -75,7 +95,7 @@ function init() {
         inquirer.prompt([
         {
             type: "input",
-            name: the key that goes with the question (this will need to be fixed!),
+            name: someUsersInputtedValue
             message: question
         }
     ])}}
