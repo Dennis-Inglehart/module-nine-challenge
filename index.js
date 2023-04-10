@@ -5,7 +5,7 @@ const generateMarkdown = require('./utils/generateMarkdown');
 const introString = "Inglehart readme generator ver.0.1.0\n------------------------------------\n"
 
 // TODO: Create an array of questions for user input <- this comment came with the starter code
-const contentQuestions = [
+contentQuestions = [
     {
         type: "input",
         name: "title",
@@ -62,8 +62,7 @@ function writeToFile(fileName, data) {
 // I feel like it's bad organization to do so many things in this one function, but whatever
 function init() {
     console.clear(); console.log(introString);
-    inquirer.prompt(contentQuestions)
-    
+    inquirer.prompt(contentQuestions)    
 .then((answers) => {
     exec('"./utils/generateMarkdown.js"', (error, stdout, stderr) => {
             if (error) {
