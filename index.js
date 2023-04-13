@@ -48,6 +48,16 @@ contentQuestions = [
             'Mozilla Public License 2.0',
             'The Unlicense',
         ]
+    },
+    {
+        type: "input",
+        name: "email",
+        message: "What is the EMAIL ADDRESS for this project?"
+    },
+    {
+        type: "input",
+        name: "gitHub",
+        message: "Under what GITHUB USERNAME can this project's repository be found?"
     }]
 
 // TODO: Create a function to write README file <- this comment came with the starter code
@@ -144,7 +154,12 @@ ${answers.contribution}
 ## Testing Instructions<hr>
     
 ${answers.test}
-${chosenLicenseOutputString}`;
+${chosenLicenseOutputString}
+## Questions<hr>
+
+The ${answers.title} file repository can be found at: https://github.com/${answers.gitHub}
+
+To contact the project leadership, email [${answers.title}](mailto:${answers.email})`;
     writeToFile("README.md", textToWrite);
 })
 }
