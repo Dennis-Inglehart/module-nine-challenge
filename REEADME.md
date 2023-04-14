@@ -12,6 +12,10 @@ Make sure you run Professional README Generator with write permissions! It needs
 
 Note that Professional README Generator will overwrite any existing README.md in its directory. That includes other README.mds that it made earlier.
 
+## Video Demonstration:
+
+[Inglehart Professional README Generator](https://watch.screencastify.com/v/Kt1PfXYCLM1JywzGryms)
+
 ## A screenshot of the Generator being used in a Git Bash terminal on Windows:
 
 ![module nine challenge screencap](/readme-screencap.png)
